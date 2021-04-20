@@ -55,28 +55,16 @@ public class Level_1 {
                 orgArray[j] = strings.get(j);
             }
 
-            /*for (String word: orgArray){
-                System.out.println(word);
-            }
-
-            System.out.println("---------------");
-
             String []mdfArray = new String[string.size()];
-            strings.toArray(mdfArray);*/
+            strings.toArray(mdfArray);
 
             for(int j = 0; j < string.size(); j++){
                 mdfArray[j] = string.get(j);
             }
 
-            /*for (String word: mdfArray){
-                System.out.println(word);
-            }
-
-            System.out.println("---------------");*/
-
             for (int j = 0; j <= orgArray.length; j++){
                 for (int k = 0; k <= mdfArray.length; k++){
-                    if ((!orgArray[j].equals(mdfArray[k])) && orgArray[j] != mdfArray[k]) {
+                    if (!orgArray[j].equals(mdfArray[k])) {
                         System.out.printf("%d: <modified line value for line %d>\n", i, i);
                     }
                     i++;
