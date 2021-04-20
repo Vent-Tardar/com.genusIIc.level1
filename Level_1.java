@@ -55,24 +55,24 @@ public class Level_1 {
                 orgArray[j] = strings.get(j);
             }
 
-            for (String word: orgArray){
+            /*for (String word: orgArray){
                 System.out.println(word);
             }
 
             System.out.println("---------------");
 
             String []mdfArray = new String[string.size()];
-            strings.toArray(mdfArray);
+            strings.toArray(mdfArray);*/
 
             for(int j = 0; j < string.size(); j++){
                 mdfArray[j] = string.get(j);
             }
 
-            for (String word: mdfArray){
+            /*for (String word: mdfArray){
                 System.out.println(word);
             }
 
-            System.out.println("---------------");
+            System.out.println("---------------");*/
 
             for (int j = 0; j <= orgArray.length; j++){
                 for (int k = 0; k <= mdfArray.length; k++){
