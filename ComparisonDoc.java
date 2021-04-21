@@ -6,7 +6,6 @@ import java.util.ArrayList;
 public class ComparisonDoc {
 
     private void checkingFiles(String org, String mdf) throws IOException {
-        //return new File(org).exists() && new File(mdf).exists();
         File f1 = new File(org);
         if(!(f1.isFile() && !f1.isDirectory())){
             throw new FileNotFoundException("Original file not found");
@@ -22,7 +21,8 @@ public class ComparisonDoc {
         }
     }
 
-    public void compare(String org, String mdf) throws IOException, FileNotFoundException{
+    public void compare(String org, String mdf) throws IOException{
+
         checkingFiles(org, mdf);
 
         try(BufferedReader br_1 = new BufferedReader(new FileReader(org));
@@ -31,28 +31,19 @@ public class ComparisonDoc {
             ArrayList<String> strings = new ArrayList<String>();
             ArrayList<String> string = new ArrayList<String>();
 
-            while ((org = br_1.readLine()) != null) {
+            while (((org = br_1.readLine()) != null) && ((mdf = br_2.readLine()) != null)) {
                 strings.add(org);
-            }
-
-            while ((mdf = br_2.readLine()) != null) {
                 string.add(mdf);
             }
 
             int i = 1;
 
             for (int j = 0; j < strings.size(); j++){
-                if (!strings.get(j).equals(string.get(j))) {
+                if (!strings.get(j).equals(string.get(j)))
                     System.out.printf("%d: <modified line value for line %d>\n", i, i);
-                }
                 i++;
             }
-        }/*catch (FileNotFoundException e){
-            System.err.println("No files found" + e.getMessage());
         }
-        catch (IOException e){
-            System.err.println(e);
-        }*/
         catch (Exception e){
             System.out.println();
             System.err.println("Somewhere in the loop is an error: " + e.getMessage());
