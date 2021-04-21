@@ -3,7 +3,16 @@ package com.genusIIc.level1;
 import java.io.*;
 
 public class ComparisonDoc {
-    public void compare(String org, String mdf){
+    private void checkingFiles(String org, String mdf) throws Exception {
+        if(!(new File(org).exists() && new File(mdf).exists())) {
+            throw new Exception("No files found");
+        }
+
+        if (org.equals(mdf)) throw new Exception("The same file was specified");
+    }
+
+    public void compare(String org, String mdf) throws Exception {
+        checkingFiles(org, mdf);
         try(BufferedReader br_1 = new BufferedReader(new FileReader(org));
             BufferedReader br_2 = new BufferedReader(new FileReader(mdf))){
 
