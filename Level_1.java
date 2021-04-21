@@ -55,6 +55,12 @@ public class Level_1 {
                 orgArray[j] = strings.get(j);
             }
 
+            /*for (String word: orgArray){
+                System.out.println(word);
+            }
+
+            System.out.println("---------------");*/
+
             String []mdfArray = new String[string.size()];
             strings.toArray(mdfArray);
 
@@ -62,13 +68,17 @@ public class Level_1 {
                 mdfArray[j] = string.get(j);
             }
 
-            for (int j = 0; j <= orgArray.length; j++){
-                for (int k = 0; k <= mdfArray.length; k++){
-                    if (!orgArray[j].equals(mdfArray[k])) {
+            /*for (String word: mdfArray){
+                System.out.println(word);
+            }
+
+            System.out.println("---------------");*/
+
+            for (int j = 0; j < orgArray.length; j++){
+                    if (!orgArray[j].equals(mdfArray[j])) {
                         System.out.printf("%d: <modified line value for line %d>\n", i, i);
                     }
                     i++;
-                }
             }
         }catch (FileNotFoundException e){
             System.out.println(e);
@@ -77,7 +87,8 @@ public class Level_1 {
             System.out.println(e);
         }
         catch (Exception e){
-            System.out.println("Somewhere in the loop is an error");
+            System.out.println();
+            System.out.println("Somewhere in the loop is an error: " + e.getMessage());
         }
     }
 }
