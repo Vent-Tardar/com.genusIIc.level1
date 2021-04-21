@@ -4,18 +4,8 @@ import java.io.IOException;
 import java.util.Scanner;
 
 public class Main {
-    public static void main(String[] args) throws IOException {
-        Scanner sc = new Scanner(System.in);
-
-        System.out.print("Enter the path to the original file: ");
-        String org = sc.nextLine();
-
-        System.out.print("Enter the path to the modified file: ");
-        String mdf = sc.nextLine();
-
-        System.out.println();
-
+    public static void main(String[] args) {
         ComparisonDoc cd = new ComparisonDoc();
-        cd.compare(org, mdf);
+        cd.compare(args[0], args[1]);
     }
 }
