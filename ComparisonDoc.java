@@ -8,10 +8,13 @@ public class ComparisonDoc {
             BufferedReader br_2 = new BufferedReader(new FileReader(mdf))){
 
             int i = 1;
+            String orgFile, mdfFile;
 
-            while (((org = br_1.readLine()) != null) && ((mdf = br_2.readLine()) != null)) {
-                if (!org.equals(mdf))
+            while (((orgFile = br_1.readLine()) != null)
+                    && ((mdfFile = br_2.readLine()) != null)) {
+                if (!orgFile.equals(mdfFile)) {
                     System.out.printf("%d: <modified line value for line %d>\n", i, i);
+                }
                 i++;
             }
         }
