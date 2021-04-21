@@ -18,7 +18,7 @@ Output:
 Sample: 
 
 > 15: <modified line value for line 15>
-> 
+
 > 23: <modified line value for line 23>
 
 ### Files
@@ -32,8 +32,11 @@ Test files:
 
 Java files:
 
-* Level_1.java
+* ~Level_1.java~
+* Main.java
+* ComperisonDoc.java
 
 ### Changes: 
 
 * Changed the algorithm for comparing array elements in file Level_1.java
+* Splitting the Level_1 file.java for two files: Main.java and ComperisonDoc.java
