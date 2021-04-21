@@ -75,10 +75,10 @@ public class Level_1 {
             System.out.println("---------------");*/
 
             for (int j = 0; j < orgArray.length; j++){
-                    if (!orgArray[j].equals(mdfArray[j])) {
-                        System.out.printf("%d: <modified line value for line %d>\n", i, i);
-                    }
-                    i++;
+                 if (!orgArray[j].equals(mdfArray[j])) {
+                     System.out.printf("%d: <modified line value for line %d>\n", i, i);
+                 }
+                 i++;
             }
         }catch (FileNotFoundException e){
             System.out.println(e);
