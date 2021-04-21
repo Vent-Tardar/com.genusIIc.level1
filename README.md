@@ -33,3 +33,7 @@ Test files:
 Java files:
 
 * Level_1.java
+
+### Changes: 
+
+* Changed the algorithm for comparing array elements in file Level_1.java
