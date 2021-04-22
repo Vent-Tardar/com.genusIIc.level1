@@ -38,7 +38,7 @@ Java files:
 * Main.java
 * ComperisonDoc.java
 
-### Changes: 
+### ~Changes:~
 
-* Changed the algorithm for comparing array elements in file Level_1.java
-* Splitting the Level_1 file.java for two files: Main.java and ComperisonDoc.java
+* ~Changed the algorithm for comparing array elements in file Level_1.java~
+* ~Splitting the Level_1 file.java for two files: Main.java and ComperisonDoc.java~
