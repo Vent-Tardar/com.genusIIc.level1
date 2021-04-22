@@ -1,4 +1,4 @@
-package com.genusIIc.level1;
+package com.genusIIc.vt.level1;
 
 public class Main {
     public static void main(String[] args) throws Exception {
