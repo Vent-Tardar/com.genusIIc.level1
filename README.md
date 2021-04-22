@@ -20,6 +20,9 @@ Sample:
 > 15: <modified line value for line 15>
 
 > 23: <modified line value for line 23>
+### Starting the program
+
+To run the program, download Java files and test files. After opening in IntellJidea, write the names of text files in args[]
 
 ### Files
 
@@ -32,7 +35,6 @@ Test files:
 
 Java files:
 
-* ~Level_1.java~
 * Main.java
 * ComperisonDoc.java
 
